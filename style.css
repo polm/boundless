@@ -1,0 +1,67 @@
+* {padding: 0; margin: 0; box-sizing: border-box;}
+
+@media screen and (max-width: 800px) {
+  #log.panel .message {
+    border-left: none ;
+    border-right: none ;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .panel {max-width: 400px;}
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  background: black; 
+  color: black; 
+} 
+
+.panel { 
+  width: 100%; 
+  margin: 50px auto 0 auto;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  min-height: 50px;
+  display: none;
+}
+
+#log {
+  background-color: inherit;
+  display: block;
+}
+
+#log .message img {
+  width: 100%;
+}
+
+#log .message.img {
+  padding: 0;
+}
+
+#log .message {
+  background: white;
+  padding: 0.5em 1em 0.5em 120px;
+  border: 3px solid #666;
+  width: 100%;
+  min-height: 100px;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+#log .message.choice {
+  border: 3px solid #6aa;
+  border-bottom: 3px solid black;
+  width: 80%;
+  margin: 1em auto 1em auto;
+  min-height: 0;
+  padding: 0.5em;
+}
+
+#log .message.choice.chosen {
+  background: #999;
+}
