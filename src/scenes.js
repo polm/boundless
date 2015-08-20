@@ -20,7 +20,9 @@
       script: function(game){
         var this$ = this;
         this.say(ss, "You may not have noticed, but we just entered the second scene.");
-        this.say(ss, "Let's demonstrate a choice. What is your favorite color?");
+        this.say(ss, "Let me show you a picture from my vacation.");
+        this.img('fossil');
+        this.say(ss, "Now let's demonstrate a choice. What is your favorite color?");
         this.choose('red', "Red", function(){
           this$.say(ss, "A fine color.");
           return game.color = 'red';
@@ -33,6 +35,16 @@
           this$.say(ss, "That's not even a color! What are you doing?");
           return game.color = 'bunny';
         });
+      }
+    }, {
+      title: "The End",
+      condition: function(it){
+        return it.color;
+      },
+      script: function(it){
+        this.say(ss, "Well, it was brief but we're at the end of the demo for now.");
+        this.say(ss, "I was a little surprised your favorite color was " + it.color + ".");
+        return this.say(ss, "Take a look at src/scenes.ls if you'd like to see what's up.");
       }
     }
   ];

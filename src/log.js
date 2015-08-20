@@ -61,8 +61,8 @@
         return this$.div.appendChild(message);
       });
     };
-    prototype.img = function(actor, imgName){
-      return this.say(actor, "<img src=\"img/" + imgName + ".jpg\"></img>", 'img');
+    prototype.img = function(imgName){
+      return this.say(null, "<img src=\"img/" + imgName + ".jpg\"></img>", 'img');
     };
     prototype.delay = function(wait){
       var this$ = this;

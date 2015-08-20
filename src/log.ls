@@ -37,8 +37,8 @@ export class Log
 
       @div.append-child message
 
-  img: (actor, img-name) ~>
-    @say actor, "<img src=\"img/#{img-name}.jpg\"></img>", \img
+  img: (img-name) ~>
+    @say null, "<img src=\"img/#{img-name}.jpg\"></img>", \img
 
   #TODO make this skippable
   delay: (wait=1000) ~>
